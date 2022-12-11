@@ -12,10 +12,21 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     public float velocity;
+    private bool isPlaying;
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        transform.position += Vector3.left * velocity * Time.deltaTime;
+        StartCoroutine(MoveObstacle());
+    }
+
+    IEnumerator MoveObstacle()
+    {
+        isPlaying = true;
+        while (isPlaying)
+        {
+            transform.position += Vector3.left * velocity * Time.deltaTime;
+            yield return null;
+        }
     }
 }

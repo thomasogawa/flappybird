@@ -8,13 +8,14 @@ public class AppStateGame : AppStates
 
     public override void EnterState()
     {
-        //Turn on Game Canvas/Scene
-        //Reset Everything
+        appManager.GamePage.gameObject.SetActive(true);
+        
+        appManager.GameManager.UpdateState(appManager.GameManager.GameStatePlaying);
     }
 
     public override void ExitState()
     {
-        //Turn off Game Canvas/Scene
-        
+        appManager.EndPage.gameObject.SetActive(false);
+        appManager.GamePage.gameObject.SetActive(false);
     }
 }

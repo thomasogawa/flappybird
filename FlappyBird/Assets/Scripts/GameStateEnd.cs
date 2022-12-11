@@ -8,13 +8,13 @@ public class GameStateEnd : GameStates
 
     public override void EnterState()
     {
-        //Turn on Game Canvas/Scene
-        //Reset Everything
+		Time.timeScale = 0;
+        gameManager.GameResult.DisplayGameOverMenu();
     }
 
     public override void ExitState()
     {
-        //Turn off Game Canvas/Scene
-        
+		Time.timeScale = 1;
+        //gameManager.GameResult.RemoveAllDisplays();
     }
 }

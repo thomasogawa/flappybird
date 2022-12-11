@@ -359,14 +359,22 @@
 "Assets/Scripts/AppStateMenu.cs"
 "Assets/Scripts/AppStates.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameResults.cs"
 "Assets/Scripts/GameStateEnd.cs"
+"Assets/Scripts/GameStatePaused.cs"
 "Assets/Scripts/GameStatePlaying.cs"
-"Assets/Scripts/GameStateResults.cs"
 "Assets/Scripts/GameStates.cs"
 "Assets/Scripts/InputHandler.cs"
+"Assets/Scripts/Invisible.cs"
+"Assets/Scripts/ObstacleEdgeInteraction.cs"
 "Assets/Scripts/ObstacleMovement.cs"
 "Assets/Scripts/ObstacleSpawner.cs"
+"Assets/Scripts/PlayerEdgeInteraction.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/PlayerObstacleInteraction.cs"
+"Assets/Scripts/ScoreHandler.cs"
+"Assets/Scripts/SoundManager.cs"
+"Assets/Scripts/TempText.cs"
 -langversion:9.0
 
 /deterministic

@@ -8,13 +8,11 @@ public class AppStateMenu : AppStates
 
     public override void EnterState()
     {
-        //Turn on Game Canvas/Scene
-        //Reset Everything
+        appManager.MenuPage.gameObject.SetActive(true);
     }
 
     public override void ExitState()
     {
-        //Turn off Game Canvas/Scene
-        
+        appManager.MenuPage.gameObject.SetActive(false);
     }
 }

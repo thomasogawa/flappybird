@@ -5,16 +5,17 @@ using UnityEngine;
 public class GameStatePlaying : GameStates
 {
     public GameStatePlaying(GameManager gameManager) : base(gameManager){}
+    private float timer;
 
     public override void EnterState()
     {
-        //Turn on Game Canvas/Scene
-        //Reset Everything
+		Time.timeScale = 1;
+        gameManager.ObstacleSpawner.SpawnMultipleObstacles();
     }
 
     public override void ExitState()
     {
-        //Turn off Game Canvas/Scene
-        
+        gameManager.ObstacleSpawner.PauseSpawning();
     }
+
 }

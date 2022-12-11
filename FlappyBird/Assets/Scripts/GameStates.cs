@@ -6,7 +6,7 @@ public class GameStates
 {
     public enum CurrentGameState
     {
-        StateGamePlaying, StateEndGame, StateResults
+        StateGamePlaying, StateGamePaused, StateEndGame
     }
 
     protected GameManager gameManager;

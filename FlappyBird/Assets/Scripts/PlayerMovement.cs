@@ -13,14 +13,24 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rigidBody;
     public float velocity;
+    public AudioClip FlapNoise;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        Flap();
     }
 
     public void Flap()
     {
         rigidBody.velocity = Vector3.up * velocity;
+        SoundManager.Instance.PlayMusic(FlapNoise);
+    }
+
+    public void Reset()
+    {
+        print(transform.position);
+        transform.position = new Vector3(0f, 1f, 0f);
+        print(transform.position);
     }
 }
