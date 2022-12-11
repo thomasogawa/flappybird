@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObstacleEdgeInteraction : MonoBehaviour
 {
@@ -10,8 +11,7 @@ public class ObstacleEdgeInteraction : MonoBehaviour
         if (other.gameObject.tag == "ObstacleEdge")
         {
             print("obstacle edge interaction");
-            //transform.position += Vector3.right * 45;
-            //ObstacleMovement.velocity *= 2;
+            //ObstacleEdgeInteraction.Invoke();
         }
     }
 }

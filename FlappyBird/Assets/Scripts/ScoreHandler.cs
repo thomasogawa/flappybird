@@ -26,8 +26,9 @@ public class ScoreHandler : MonoBehaviour
 		EndScoreText.text = "Score: " + Score;
 	}
 
-	public void Reset()
+	public void ResetScore()
 	{
 		Score = 0;
+		ActiveScoreText.text = "00";
 	}
 }

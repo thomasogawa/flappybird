@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
     public Canvas PausedUI;
     public GameResults GameResult;
     public GameStates CurrentState;
-
-    // Start is called before the first frame update
+    
     void Awake()
     {
         GameStatePlaying = new GameStatePlaying(this);
@@ -26,12 +25,10 @@ public class GameManager : MonoBehaviour
     public void UpdateState(GameStates newState)
     {
         if (newState == GameStatePlaying)
-            print("reset");
             Reset.Invoke();
         if (null != CurrentState)
             CurrentState.ExitState();
         CurrentState = newState;
-        print(newState);
         CurrentState.EnterState();
     }
     

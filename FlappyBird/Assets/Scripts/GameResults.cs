@@ -22,4 +22,9 @@ public class GameResults : MonoBehaviour
     {
         ResultUI.SetActive(false);
     }
+    
+    public void EnableActiveScoreUI()
+    {
+        PlayingScoreUI.SetActive(true);
+    }
 }

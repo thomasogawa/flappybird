@@ -32,7 +32,7 @@ public class ObstacleSpawner : MonoBehaviour
     IEnumerator SpawnObstacles()
     {
         isSpawning = true;
-        while (isSpawning && objectsSpawned < 15)
+        while (isSpawning && objectsSpawned < 10)
         {
 			ObstaclesArr[objectsSpawned] = SpawnObstacle();
             objectsSpawned++;

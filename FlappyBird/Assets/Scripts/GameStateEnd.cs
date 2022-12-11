@@ -15,6 +15,5 @@ public class GameStateEnd : GameStates
     public override void ExitState()
     {
 		Time.timeScale = 1;
-        //gameManager.GameResult.RemoveAllDisplays();
     }
 }
