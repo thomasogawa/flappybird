@@ -19,7 +19,7 @@ public class ScoreHandler : MonoBehaviour
 		else {
         	ActiveScoreText.text = Score.ToString();
 		}
-		Instantiate(TempTextPrefab, new Vector2(800, 345), Quaternion.identity, transform);
+		var tempText = Instantiate(TempTextPrefab, this.transform.position , Quaternion.identity);
     }
 
 	public void UpdateEndTextScore(){
@@ -30,5 +30,10 @@ public class ScoreHandler : MonoBehaviour
 	{
 		Score = 0;
 		ActiveScoreText.text = "00";
+	}
+
+	public int GetScore()
+	{
+		return Score;
 	}
 }

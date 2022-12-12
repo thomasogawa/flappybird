@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public void Flap()
     {
         rigidBody.velocity = Vector3.up * velocity;
-        SoundManager.Instance.PlayMusic(FlapNoise);
+        SoundManager.Instance.Play(FlapNoise);
     }
 
     public void Reset()

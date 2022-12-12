@@ -9,12 +9,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public GameStatePlaying GameStatePlaying;
     [HideInInspector] public GameStatePaused GameStatePaused;
     [HideInInspector] public GameStateEnd GameStateEnd;
-
+    public AudioClip DieNoise;
+    public AudioClip BackgroundMusic;
     public UnityEvent Reset;
     public Canvas PausedUI;
     public GameResults GameResult;
     public GameStates CurrentState;
-    
+    public ScoreHandler ScoreHandler;
+    public FileHandler FileHandler;
+    public Achievements Achievements;
     void Awake()
     {
         GameStatePlaying = new GameStatePlaying(this);
@@ -24,10 +27,10 @@ public class GameManager : MonoBehaviour
     
     public void UpdateState(GameStates newState)
     {
-        if (newState == GameStatePlaying)
-            Reset.Invoke();
         if (null != CurrentState)
             CurrentState.ExitState();
+            if (CurrentState == GameStateEnd)
+                Reset.Invoke();
         CurrentState = newState;
         CurrentState.EnterState();
     }

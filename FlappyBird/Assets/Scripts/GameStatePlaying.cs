@@ -9,7 +9,8 @@ public class GameStatePlaying : GameStates
 
     public override void EnterState()
     {
-		Time.timeScale = 1;
+        SoundManager.Instance.PlayMusic(gameManager.BackgroundMusic);
+        Time.timeScale = 1;
         gameManager.ObstacleSpawner.SpawnMultipleObstacles();
     }
 
