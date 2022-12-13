@@ -1,1 +1,1 @@
-/Users/Thomas/flappybird/FlappyBird
+/Users/alanlu/Documents/CPSC_Courses/CPSC245/flappybird/FlappyBird

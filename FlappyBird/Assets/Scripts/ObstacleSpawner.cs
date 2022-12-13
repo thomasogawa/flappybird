@@ -25,7 +25,7 @@ public class ObstacleSpawner : MonoBehaviour
     
     private GameObject SpawnObstacle()
     {
-        newObstacle = Instantiate(ObstaclePrefab, new Vector2(19, Random.Range(1.75f,-1.5f)), Quaternion.identity);
+        newObstacle = Instantiate(ObstaclePrefab, new Vector2(19 + (objectsSpawned*2), Random.Range(1.75f,-1.5f)), Quaternion.identity);
 		return newObstacle;
     }
 
@@ -36,7 +36,7 @@ public class ObstacleSpawner : MonoBehaviour
         {
 			ObstaclesArr[objectsSpawned] = SpawnObstacle();
             objectsSpawned++;
-            yield return new WaitForSeconds(1.0f);
+            yield return null;
         }
     }
 	    
